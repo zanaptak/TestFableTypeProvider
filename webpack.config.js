@@ -6,7 +6,7 @@ var path = require("path");
 
 module.exports = {
     mode: "development",
-    entry: "./App/App.fsproj",
+    entry: "./App/App.fs.js",
     output: {
         path: path.join(__dirname, "./public"),
         filename: "bundle.js",
@@ -14,11 +14,5 @@ module.exports = {
     devServer: {
         contentBase: "./public",
         port: 8080,
-    },
-    module: {
-        rules: [{
-            test: /\.fs(x|proj)?$/,
-            use: "fable-loader"
-        }]
     }
 }
